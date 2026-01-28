@@ -1,81 +1,50 @@
 tarefas = []
 
 while True:
-    print('[1] Adicionar tarefa.')
-    print('[2] Listar tarefas.')
-    print('[3] Remover tarefa.')
-    print('[0] Sair.')
+    print('\n=== GERENCIADOR DE TAREFAS ===')
+    print('[1] Adicionar tarefa')
+    print('[2] Listar tarefas')
+    print('[3] Remover tarefa')
+    print('[4] Concluir tarefa (EM DESEMVOLCIMENTO)')
+    print('[0] Sair')
 
-    escolha = int(input('Selecione uma opção:'))
-
-    if escolha == 0:
-        print('Saindo do organizador de tarefas.')
-        print('Você saiu do organizador.')
-        break
-    
-    elif escolha == 1:
-        print('[ADICIONAR TAREFAS]')
-        tarefa = input('Adicionar tarefa:')
-        tarefas.append(tarefa)
-
-        print('Tarefa Adicionada com Sucesso:')
-        print(tarefas)
-
-    elif escolha == 2:
-        print('[LISTA DE TAREFAS]')
-        if not tarefas:
-            print('Sem tarefas')
-        else:
-            for tarefa in tarefas:
-                print(tarefa)
-
-    tarefas = []
-
-while True:
-    print('[1] Adicionar tarefa.')
-    print('[2] Listar tarefas.')
-    print('[3] Remover tarefa.')
-    print('[4] Concluir tarefa.')
-    print('[0] Sair.')
-
-    escolha = int(input('Selecione uma opção:'))
+    escolha = int(input('Selecione uma opção: '))
 
     if escolha == 0:
-        print('Saindo do organizador de tarefas.')
+        print('Saindo do organizador de tarefas...')
         print('Você saiu do organizador.')
         break
-    
-    elif escolha == 1:
-        print('[ADICIONAR TAREFAS]')
-        tarefa = input('Adicionar tarefa:')
-        tarefas.append(tarefa)
 
-        print('Tarefa Adicionada com Sucesso:')
-        print(tarefas)
+    elif escolha == 1:
+        print('\n[ADICIONAR TAREFA]')
+        tarefa = input('Digite a tarefa: ')
+        tarefas.append(tarefa)
+        print('Tarefa adicionada com sucesso!')
 
     elif escolha == 2:
-        print('[LISTA DE TAREFAS]')
+        print('\n[LISTA DE TAREFAS]')
         if not tarefas:
-            print('Sem tarefas')
+            print('Sem tarefas.')
         else:
             for tarefa in tarefas:
-                print(tarefa)
+                print('-', tarefa)
 
     elif escolha == 3:
-    print('[REMOVER TAREFA]')
-
-    if not tarefas:
-        print('Sem tarefas para remover.')
-    else:
-        for tarefa in tarefas:
-            print(tarefa)
-
-        opcao = input('Digite o nome da tarefa: ')
-        if opcao not in tarefas:
-            print('Tarefa não existe.')
+        print('\n[REMOVER TAREFA]')
+        if not tarefas:
+            print('Sem tarefas para remover.')
         else:
-            tarefas.remove(opcao)
-            print('Tarefa removida com sucesso.')
+            for tarefa in tarefas:
+                print('-', tarefa)
+
+            opcao = input('Digite o nome da tarefa que deseja remover: ')
+            if opcao not in tarefas:
+                print('Tarefa não existe.')
+            else:
+                tarefas.remove(opcao)
+                print('Tarefa removida com sucesso.')
+
+   
 
         
         
@@ -85,3 +54,4 @@ while True:
         
 
     
+
